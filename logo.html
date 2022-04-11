@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css">
+</head>
+<script src="./html2canvas.js"></script>
+<body>
+    <div class="container" id = "capture">
+        <div class="circle">
+        </div>
+        <div class="line"></div>
+    </div>
+</body>
+<style>
+
+    .container {
+        display: none;
+        width: 400px;
+        height: 400px;
+        background-color: #262930;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle {
+        width: 350px;
+        height: 350px;
+        background-color: #EA3433;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .line {
+        width: 600px;
+        height: 3px;
+        background-color: #F9E4EC;
+        transform-origin: center;
+        transform: rotate(135deg);
+        z-index: 100;
+    }
+    canvas{
+        border: none;
+        padding: 0;
+    }
+</style>
+<!-- <script>
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.body.appendChild(canvas)
+});
+</script> -->
+</html>
